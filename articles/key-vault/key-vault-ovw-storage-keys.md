@@ -28,6 +28,7 @@ The Azure Storage Account keys feature is initially available through the REST, 
 
 Key Vault performs several internal management functions on your behalf when you use Storage Account Keys.
 
+
 1. Azure Key Vault manages keys of an Azure Storage Account (SAS). 
     - Internally, Azure Key Vault can list (sync) keys with an Azure Storage Account.  
     - Azure Key Vault regenerates (rotates) the keys periodically. 
@@ -52,7 +53,8 @@ Developers used to need to do the following practices with a storage account key
 //create storage account using connection string containing account name 
 // and the storage key 
 
-var storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));var blobClient = storageAccount.CreateCloudBlobClient();
+var storageAccount = CloudStorageAccount.Parse(CloudConfigurationManager.GetSetting("StorageConnectionString"));
+var blobClient = storageAccount.CreateCloudBlobClient();
  ```
  
 ### After Azure Key Vault Storage Keys 
